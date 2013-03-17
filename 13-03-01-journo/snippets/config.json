@@ -1,0 +1,8 @@
+{
+  "title": "Title TK",
+  "description": "A Description for the RSS of My Blog",
+  "author": "Me",
+  "url": "http://example.com/blog",
+  "publish": "user@example.com:/path/to/blog",
+  "publishPort": 22
+}

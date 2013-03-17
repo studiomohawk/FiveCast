@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Dropbox/Source/playground/journo/bootstrap/layout.html.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v12">
+<meta name="syntax" content="html">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="Tomorrow-Night-Eighties">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #cccccc; background-color: #2d2d2d; }
+body { font-family: monospace; color: #cccccc; background-color: #2d2d2d; }
+* { font-size: 1em; }
+.String { color: #99cc99; }
+.htmlTag { color: #f2777a; }
+.htmlTagName { color: #f2777a; }
+.Comment { color: #999999; }
+.htmlArg { color: #f2777a; }
+.PreProc { color: #cc99cc; }
+.Title { color: #999999; font-weight: bold; }
+.Identifier { color: #f2777a; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment">&lt;!DOCTYPE html&gt;</span>
+<span class="htmlTag">&lt;</span><span class="htmlTagName">html</span><span class="htmlTag">&gt;</span>
+  <span class="htmlTag">&lt;</span><span class="htmlTagName">head</span><span class="htmlTag">&gt;</span>
+<span class="PreProc">    </span><span class="htmlTag">&lt;</span><span class="htmlTagName">meta</span><span class="htmlTag"> </span><span class="htmlArg">charset</span><span class="htmlTag">=</span><span class="String">&quot;utf-8&quot;</span><span class="htmlTag">&gt;</span>
+<span class="PreProc">    </span><span class="htmlTag">&lt;</span><span class="htmlTagName">meta</span><span class="htmlTag"> </span><span class="htmlArg">http-equiv</span><span class="htmlTag">=</span><span class="String">&quot;X-UA-Compatible&quot;</span><span class="htmlTag"> </span><span class="htmlArg">content</span><span class="htmlTag">=</span><span class="String">&quot;IE=edge,chrome=1&quot;</span><span class="htmlTag">&gt;</span>
+<span class="PreProc">    </span><span class="htmlTag">&lt;</span><span class="htmlTagName">title</span><span class="htmlTag">&gt;&lt;% if ( </span><span class="htmlArg">title</span><span class="htmlTag"> ){ %&gt;</span><span class="Title"> </span><span class="htmlTag">&lt;%=</span><span class="String"> title</span><span class="htmlTag"> %&gt;</span><span class="Title"> | </span><span class="htmlTag">&lt;% } %&gt;</span><span class="Title">Demo: journo</span><span class="Identifier">&lt;/</span><span class="htmlTagName">title</span><span class="Identifier">&gt;</span>
+<span class="PreProc">    </span><span class="htmlTag">&lt;</span><span class="htmlTagName">meta</span><span class="htmlTag"> </span><span class="htmlArg">name</span><span class="htmlTag">=</span><span class="String">&quot;viewport&quot;</span><span class="htmlTag"> </span><span class="htmlArg">content</span><span class="htmlTag">=</span><span class="String">&quot;width=device-width&quot;</span><span class="htmlTag">&gt;</span>
+<span class="PreProc">    </span><span class="htmlTag">&lt;</span><span class="htmlTagName">link</span><span class="htmlTag"> </span><span class="htmlArg">rel</span><span class="htmlTag">=</span><span class="String">&quot;stylesheet&quot;</span><span class="htmlTag"> </span><span class="htmlArg">href</span><span class="htmlTag">=</span><span class="String">&quot;//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css&quot;</span><span class="htmlTag">&gt;</span>
+<span class="PreProc">  </span><span class="Identifier">&lt;/</span><span class="htmlTagName">head</span><span class="Identifier">&gt;</span>
+  <span class="htmlTag">&lt;</span><span class="htmlTagName">body</span><span class="htmlTag">&gt;</span>
+
+  <span class="htmlTag">&lt;</span><span class="htmlTagName">div</span><span class="htmlTag"> </span><span class="htmlArg">id</span><span class="htmlTag">=</span><span class="String">&quot;page&quot;</span><span class="htmlTag"> </span><span class="htmlArg">class</span><span class="htmlTag">=</span><span class="String">&quot;page&quot;</span><span class="htmlTag">&gt;</span>
+    <span class="htmlTag">&lt;</span><span class="htmlTagName">div</span><span class="htmlTag"> </span><span class="htmlArg">class</span><span class="htmlTag">=</span><span class="String">&quot;content&quot;</span><span class="htmlTag">&gt;</span>
+      <span class="htmlTag">&lt;%=</span><span class="String"> content</span><span class="htmlTag"> %&gt;</span>
+    <span class="Identifier">&lt;/</span><span class="htmlTagName">div</span><span class="Identifier">&gt;</span>
+    <span class="htmlTag">&lt;</span><span class="htmlTagName">nav</span><span class="htmlTag">&gt;</span>
+      <span class="htmlTag">&lt;</span><span class="htmlTagName">ul</span><span class="htmlTag">&gt;</span>
+        <span class="htmlTag">&lt;% _.each( folderContents(</span><span class="String">'posts'</span><span class="htmlTag">), function( </span><span class="htmlArg">value</span><span class="htmlTag">, key, </span><span class="htmlArg">list</span><span class="htmlTag"> ) { %&gt;</span>
+        <span class="htmlTag">&lt;</span><span class="htmlTagName">li</span><span class="htmlTag">&gt;&lt;</span><span class="htmlTagName">a</span><span class="htmlTag"> </span><span class="htmlArg">href</span><span class="htmlTag">=</span><span class="String">&quot;&lt;%= postName(value) %&gt;&quot;</span><span class="htmlTag">&gt;&lt;%=</span><span class="String"> postName(value)</span><span class="htmlTag"> %&gt;</span><span class="Identifier">&lt;/</span><span class="htmlTagName">a</span><span class="Identifier">&gt;&lt;/</span><span class="htmlTagName">li</span><span class="Identifier">&gt;</span>
+        <span class="htmlTag">&lt;% }); %&gt;</span>
+      <span class="Identifier">&lt;/</span><span class="htmlTagName">ul</span><span class="Identifier">&gt;</span>
+    <span class="Identifier">&lt;/</span><span class="htmlTagName">nav</span><span class="Identifier">&gt;</span>
+  <span class="Identifier">&lt;/</span><span class="htmlTagName">div</span><span class="Identifier">&gt;</span>
+
+  <span class="Identifier">&lt;/</span><span class="htmlTagName">body</span><span class="Identifier">&gt;</span>
+<span class="Identifier">&lt;/</span><span class="htmlTagName">html</span><span class="Identifier">&gt;</span>
+</pre>
+</body>
+</html>
